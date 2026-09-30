@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Binary Clock</string>
+    <string name="widget_description">The current time as a binary (BCD) clock</string>
+    <string name="how_to_add">Long-press your home screen, choose Widgets, and drag “Binary Clock” onto it.\n\nEach column is one digit (HH:MM); read the lit dots from top to bottom as 8, 4, 2, 1 and add them up.</string>
+    <string name="grant_exact_alarm">Allow exact alarms so the clock updates on time</string>
+</resources>

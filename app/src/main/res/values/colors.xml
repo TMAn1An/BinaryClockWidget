@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="dot_on">#FF00838F</color>
+    <color name="dot_off">#1F000000</color>
+    <color name="widget_background">#E6FFFFFF</color>
+    <color name="icon_background">#FF102027</color>
+</resources>
