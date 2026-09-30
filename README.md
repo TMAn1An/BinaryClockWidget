@@ -37,7 +37,8 @@ From the command line: `./gradlew installDebug`. For unit tests: `./gradlew test
 ## Download a build
 
 The easiest way: open the repo's **Releases** page and download the latest `BinaryClock-vX.Y.Z.apk`.
-Pushing a tag like `v1.0.1` builds and publishes a new release automatically.
+To publish a new one, push a tag like `v1.0.1`, or go to **Actions → Build → Run workflow** and
+enter the tag in *release_tag*.
 
 Every push is built by GitHub Actions (`.github/workflows/build.yml`), which runs the unit
 tests and builds a debug APK. Open the **Actions** tab, pick the latest run, and download
