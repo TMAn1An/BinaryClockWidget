@@ -30,3 +30,10 @@ From the command line: `./gradlew installDebug`. For unit tests: `./gradlew test
 - `MainActivity.kt`: a tiny launcher screen. On Android 12+ it offers a button to grant the
   *exact alarm* permission. Without that permission Android may deliver the minute tick late.
 - Light and dark colours live in `res/values/colors.xml` and `res/values-night/colors.xml`.
+
+## Download a build
+
+Every push is built by GitHub Actions (`.github/workflows/build.yml`), which runs the unit
+tests and builds a debug APK. Open the **Actions** tab, pick the latest run, and download
+**binary-clock-debug-apk**. Unzip it, copy the `.apk` to your phone and open it. Android will
+ask you to allow installing apps from that source.
