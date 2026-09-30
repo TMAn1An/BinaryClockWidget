@@ -4,6 +4,11 @@
     <!-- Lets the widget redraw exactly at each minute boundary (Android 12+ asks the user). -->
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
 
+    <!-- The live wallpaper is optional; the app still installs on devices without it. -->
+    <uses-feature
+        android:name="android.software.live_wallpaper"
+        android:required="false" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -33,5 +38,18 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/binary_clock_widget_info" />
         </receiver>
+
+        <service
+            android:name=".BinaryClockWallpaperService"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_WALLPAPER">
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/binary_clock_wallpaper" />
+        </service>
     </application>
 </manifest>

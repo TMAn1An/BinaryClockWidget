@@ -39,6 +39,18 @@ class BinaryTimeTest {
         }
     }
 
+    @Test
+    fun unusedDotsNeverLight() {
+        for (h in 0..23) for (m in 0..59) for (use24 in listOf(true, false)) {
+            val lit = BinaryTime.litDots(h, m, use24)
+            for (col in 0..3) for (row in 0..3) {
+                if (!BinaryTime.isUsed(col, row)) {
+                    assertEquals("dot $col/$row at $h:$m", false, lit[col][row])
+                }
+            }
+        }
+    }
+
     @Test(expected = IllegalArgumentException::class)
     fun rejectsInvalidHour() {
         BinaryTime.digits(24, 0, use24Hour = true)

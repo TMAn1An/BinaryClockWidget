@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Base palette. On Android 12+ values-v31 / values-night-v31 replace these with the
+     system's Material You colours, so the clock follows the user's wallpaper theme. -->
 <resources>
-    <color name="dot_on">#FF00838F</color>
-    <color name="dot_off">#1F000000</color>
-    <color name="widget_background">#E6FFFFFF</color>
+    <!-- Widget -->
+    <color name="clock_accent">#FF00838F</color>
+    <color name="clock_surface">#FFF4F7F8</color>
+
+    <!-- Live wallpaper (always dark, so it sits well on the lock screen) -->
+    <color name="wallpaper_accent">#FF4DD0E1</color>
+    <color name="wallpaper_surface">#FF0E1416</color>
+
     <color name="icon_background">#FF102027</color>
 </resources>

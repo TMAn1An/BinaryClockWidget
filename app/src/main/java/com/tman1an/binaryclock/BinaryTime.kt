@@ -10,6 +10,16 @@ object BinaryTime {
     /** Bit weights from the top row to the bottom row. */
     val BIT_WEIGHTS = intArrayOf(8, 4, 2, 1)
 
+    /**
+     * Whether a dot can ever light up. The hour tens digit never exceeds 2 (no 8 or 4 dot)
+     * and the minute tens digit never exceeds 5 (no 8 dot); those dots are left blank.
+     */
+    fun isUsed(column: Int, row: Int): Boolean = when (column) {
+        0 -> row >= 2
+        2 -> row >= 1
+        else -> true
+    }
+
     /** The four decimal digits shown by the clock, e.g. 21:37 -> [2, 1, 3, 7]. */
     fun digits(hour: Int, minute: Int, use24Hour: Boolean): IntArray {
         require(hour in 0..23) { "hour out of range: $hour" }

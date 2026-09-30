@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Binary Clock</string>
-    <string name="widget_description">The current time as a binary (BCD) clock</string>
-    <string name="how_to_add">Long-press your home screen, choose Widgets, and drag “Binary Clock” onto it.\n\nEach column is one digit (HH:MM); read the lit dots from top to bottom as 8, 4, 2, 1 and add them up.</string>
-    <string name="grant_exact_alarm">Allow exact alarms so the clock updates on time</string>
+    <string name="tagline">Time, one bit at a time.</string>
+    <string name="widget_description">The current time as a binary clock, in your theme colours</string>
+    <string name="wallpaper_description">A binary clock for your home and lock screen, in your theme colours</string>
+
+    <string name="section_read">How to read it</string>
+    <string name="read_columns">Each column is one digit of the time: hours on the left, minutes on the right.</string>
+    <string name="read_rows">From top to bottom the rows are worth 8, 4, 2 and 1. Add up the lit dots in a column to get its digit.</string>
+    <string name="read_example">Example: 2 · 1 : 3 · 7 reads as 21:37.</string>
+
+    <string name="section_setup">Set up</string>
+    <string name="home_title">Home screen widget</string>
+    <string name="home_body">Place the clock on your home screen. It updates every minute and follows your 12- or 24-hour setting.</string>
+    <string name="home_action">Add widget</string>
+    <string name="home_manual">Long-press your home screen, tap Widgets, then drag Binary Clock into place.</string>
+
+    <string name="lock_title">Lock screen</string>
+    <string name="lock_body">Set Binary Clock as your live wallpaper to show it on the lock screen. On devices that support lock screen widgets, you can also add the widget there.</string>
+    <string name="lock_action">Set live wallpaper</string>
+    <string name="lock_unavailable">Live wallpapers are not supported on this device.</string>
+
+    <string name="exact_title">Precise updates</string>
+    <string name="exact_body">Allow exact alarms so the widget changes right on the minute. Without this, Android may delay updates to save battery.</string>
+    <string name="exact_action">Allow</string>
+
+    <string name="version_label">Version %1$s</string>
 </resources>
