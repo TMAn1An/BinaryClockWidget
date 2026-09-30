@@ -91,7 +91,9 @@ class BinaryClockWallpaperService : WallpaperService() {
                 val cx = canvas.width / 2f
                 val cy = canvas.height / 2f
                 bounds.set(cx - size / 2, cy - size / 2, cx + size / 2, cy + size / 2)
-                renderer.draw(canvas, bounds, lit, context.getColor(R.color.wallpaper_accent))
+                val accent = ClockColors.custom(context)
+                    ?: context.getColor(R.color.wallpaper_accent)
+                renderer.draw(canvas, bounds, lit, accent)
             } finally {
                 holder.unlockCanvasAndPost(canvas)
             }

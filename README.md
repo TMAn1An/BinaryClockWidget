@@ -43,6 +43,9 @@ On Android 12+ the dots use your phone's Material You colours (`res/values-v31`,
 `res/values-night-v31`), so they change when your wallpaper or theme changes. Older versions
 use the fixed teal palette in `res/values/colors.xml`.
 
+The app's **Clock colour** picker (`ClockColors.kt`) lets you override this on any Android
+version with one of nine preset colours. **Auto** goes back to following the theme.
+
 ## Download a build
 
 The easiest way: open the repo's **Releases** page and download the latest `BinaryClock-vX.Y.Z.apk`.

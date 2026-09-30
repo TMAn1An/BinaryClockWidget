@@ -55,7 +55,8 @@ class BinaryClockView @JvmOverloads constructor(
             paddingLeft.toFloat(), paddingTop.toFloat(),
             (width - paddingRight).toFloat(), (height - paddingBottom).toFloat(),
         )
-        val accent = MaterialColors.getColor(this, androidx.appcompat.R.attr.colorPrimary)
+        val accent = ClockColors.custom(context)
+            ?: MaterialColors.getColor(this, androidx.appcompat.R.attr.colorPrimary)
         renderer.draw(canvas, bounds, lit, accent)
     }
 }

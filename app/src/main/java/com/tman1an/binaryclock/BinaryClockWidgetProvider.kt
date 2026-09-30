@@ -7,6 +7,7 @@ import android.appwidget.AppWidgetProvider
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import android.os.Build
 import android.text.format.DateFormat
 import android.widget.RemoteViews
@@ -67,13 +68,19 @@ class BinaryClockWidgetProvider : AppWidgetProvider() {
                 DateFormat.is24HourFormat(context),
             )
 
+            // A custom colour replaces the theme colour but keeps each dot's alpha (SRC_ATOP);
+            // a transparent filter leaves the theme colour untouched.
+            val tint = ClockColors.custom(context) ?: Color.TRANSPARENT
+
             val views = RemoteViews(context.packageName, R.layout.widget_binary_clock)
             for (column in DOT_IDS.indices) {
                 for (row in DOT_IDS[column].indices) {
+                    val id = DOT_IDS[column][row]
                     views.setImageViewResource(
-                        DOT_IDS[column][row],
+                        id,
                         if (lit[column][row]) R.drawable.dot_on else R.drawable.dot_off,
                     )
+                    views.setInt(id, "setColorFilter", tint)
                 }
             }
 

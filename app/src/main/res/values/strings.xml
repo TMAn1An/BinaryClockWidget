@@ -5,6 +5,21 @@
     <string name="widget_description">The current time as a binary clock, in your theme colours</string>
     <string name="wallpaper_description">A binary clock for your home and lock screen, in your theme colours</string>
 
+    <string name="section_color">Clock colour</string>
+    <string name="color_auto">Auto</string>
+    <string name="color_auto_hint_dynamic">Follows your wallpaper and theme colours.</string>
+    <string name="color_auto_hint_static">Uses the default teal. Pick any colour below.</string>
+    <string name="color_custom_hint">Used by the widget, the live wallpaper and the preview above.</string>
+    <string name="color_teal">Teal</string>
+    <string name="color_blue">Blue</string>
+    <string name="color_indigo">Indigo</string>
+    <string name="color_purple">Purple</string>
+    <string name="color_pink">Pink</string>
+    <string name="color_red">Red</string>
+    <string name="color_orange">Orange</string>
+    <string name="color_amber">Amber</string>
+    <string name="color_green">Green</string>
+
     <string name="section_read">How to read it</string>
     <string name="read_columns">Each column is one digit of the time: hours on the left, minutes on the right.</string>
     <string name="read_rows">From top to bottom the rows are worth 8, 4, 2 and 1. Add up the lit dots in a column to get its digit.</string>
