@@ -4,12 +4,15 @@ An Android home-screen widget that shows the time as a BCD binary clock.
 
 ```
  H  H   M  M
-    ○   ○  ●     8
-    ○   ●  ○     4
- ●  ○   ●  ●     2
- ○  ●   ●  ●     1
- 2  1   3  7   → 21:37
+ ·  ○   ·  ○    8
+ ·  ○   ○  ●    4
+ ●  ○   ●  ●    2
+ ○  ●   ●  ●    1
+ 2  1   3  7  → 21:37
 ```
+
+● = on, ○ = off, · = never used (the hour tens digit only goes up to 2, and the minute
+tens digit only goes up to 5).
 
 Each column is one digit of `HH:MM`. Add up the values of the lit dots (8, 4, 2, 1) to read it.
 
@@ -32,6 +35,9 @@ From the command line: `./gradlew installDebug`. For unit tests: `./gradlew test
 - Light and dark colours live in `res/values/colors.xml` and `res/values-night/colors.xml`.
 
 ## Download a build
+
+The easiest way: open the repo's **Releases** page and download the latest `BinaryClock-vX.Y.Z.apk`.
+Pushing a tag like `v1.0.1` builds and publishes a new release automatically.
 
 Every push is built by GitHub Actions (`.github/workflows/build.yml`), which runs the unit
 tests and builds a debug APK. Open the **Actions** tab, pick the latest run, and download
